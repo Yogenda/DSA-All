@@ -31,6 +31,7 @@ public class DSA_Class_3 {
         nemo.add("eight");
         nemo.add("nine");
         nemo.add("ten");
+        nemo.add("eleven");
         findNemo(nemo);
 	}
 	//After adding the lots of array items there is no change in the time.
