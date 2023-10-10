@@ -1,0 +1,20 @@
+what if i will ask you what is the Big O of our function nemo.
+
+as our number of elements increases same our number of operations increases.
+so this is Linear.
+
+Here we learned our first Big O notation which is O(n) --> Linear time.
+
+n -> it can be anything it means O depends on the number of inputs 'n' O(n).
+
+It is the most common notation that we find.
+
+Note: Big O does'nt calculate things in seconds instead we check how quickly it runs.
+	It completly depends on the number of inputs we have and number of operations it increases.
+	
+------------
+eg: function compressFirst(box){
+		console.log(box[0]);
+	}
+
+what will happen if we have 10, 100, or 1000 number of boxes
