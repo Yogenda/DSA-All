@@ -1,0 +1,157 @@
+Request :-  It is the process of sending information to the server.
+Response :-  It is the process of sending information to the client from server based on request.
+ 
+Web Server :- It is  a software which recieves request from the client and sends respons to the client. 
+
+These are the differnt types of web servers
+
+1.  Apache Tomcat
+2.  Web Logic
+3.  GlassFish
+----------------------
+Apache Tomcat
+
+Download and install tomcat
+
+how to start server
+
+http://servername:portno/appname/filename.html
+
+In every system, if the server is local, then servername : "localhost"
+
+Server identified with either name/ip address
+IP Address :- "127.0.0.1"
+
+portnumber :- It is a number which meant for identifing application uniqly
+by default local server having 8080. if we need, we can change that port number. 
+
+usually port numbers are b/w 0 - 65535, but 0- 1024 numbers are already used for system config.
+
+http://localhost:8080/AppName/abc.html
+or 
+http://127.0.0.1:8080/AppName/abc.html
+
+Server has to start first before executing any page
+once all the pages are executed, 
+we can stop server.
+
+http://127.0.0.1:8080/AppName/abc.html
+http://localhost:8081/SampleWebApplication/
+
+http://localhost:8081/SampleWebApplication/Demo.html
+file:///C:/Phase2Weekend/Register.html
+------------------------
+
+As per Java, there are two web technologies
+
+1. Servlets
+2. JSP (Java Server Pages)
+
+Servlets :- It is a web technology which meant for create serverside web applications.
+
+Servlet is a technology is useing creating web pages which will run on server. 
+
+Basically sites are two types 
+
+Static Websites		it has information fixed.
+
+Dynamic Websites	it has information changing according to requirement. 
+				servlets are menat for creting dynamic sites.
+
+to work with servlets
+
+Servlet is a java class which has web programming. 
+
+class demoweb
+{
+
+}
+
+there are an interface, and two classes are used to make a servlet class as web component. 
+
+servlet :- interface
+
+GenericServlet, HttpServlet are the classes
+
+class demoweb  implements Servlet
+{
+	public void init()
+	{
+		initial task of the servlet
+	}
+
+	public void service()
+	{
+		Actual task of the servlet has to be defined in service()
+	}
+
+	public void destory()
+	{
+		it will delete  servlet copy once task is done.
+	}
+}
+
+class demoweb extends HttpServlet
+{
+
+}
+
+servlet interface having following methods
+
+init()
+
+service()
+
+destroy()
+
+getServletInfo()
+
+
+ 
+java provides all the external library with a special files called as "Jar" files. 
+Jar files are special executable files where it consist of classes and interfaces. 
+
+for servlet technology:  we have use "servlet-api.jar"
+
+it can be get it from tomcat server.
+
+-------------------
+How  to  send data from html page to servlet?
+----------------------------------------------
+1. Create html page, within that page use form tag as follows
+<form  name="name of form"  method="POST/GET"  action="Pagename/servletName">
+			create html tools as per required
+	button should be "submit".
+</form>
+
+these are called HttpRequest Type:-
+
+POST :-  it is meant for sending data to the server.
+GET :-  It is meant for recieving data from the server.
+Put
+Delete
+
+2. IN Servlet,  get value from server as follows
+	Variable = Request.getParameter("toolname");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

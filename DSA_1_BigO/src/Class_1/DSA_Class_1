@@ -1,0 +1,41 @@
+We can use various platforms to write our code few of them are as below
+
+Programming i am using is JS
+
+https://replit.com/
+Developer console
+Text editors
+https://glot.io/
+
+Big O
+All the company uses the Big O (amazon, Google, FB, .etc)
+
+It is known as Big O asymptotic analysis - 
+
+Any problem can be solved in various ways but we have to analyse the best way the proble is solved. And here the Big O helps us. It tells us how well the problem is solved.
+
+What is good code?
+Readable: It should be clean and other programer can read your code.
+Scalable: Big O allow us to scale our code.
+	It means allows us to measure the scalability 
+	
+If we want to bake a cake there are 2 ways 
+First if good: we refer the recipe book and then step by step with the measurements we prepare the cake.
+Second is bad:
+
+Same our machine works: -> we give the instructions to the machine -> it executer it internally -> provides us the output.
+
+As there are many to cook same ways there are many ways to solve the problem (efficent or non efficient) 
+
+
+const nemo = ['nemo'];
+
+function findNemo(array) {
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] == 'nemo') {
+      console.log('Found Nemo');
+    }
+  }
+}
+
+findNemo(nemo);

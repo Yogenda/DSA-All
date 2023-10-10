@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+ <beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://www.springframework.org/schema/beans"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:mvc="http://www.springframework.org/schema/mvc"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    http://www.springframework.org/schema/context 
+    http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<context:annotation-config />
+	
+	<bean id="objAcc1"  class="com.models.Account">
+		<property name="acno"  value="ACC1001" />
+		<property name="actype"  value="Savings" />
+	</bean>
+	
+	<bean id="objAcc2"  class="com.models.Account">
+		<property name="acno"  value="ACC1002" />
+		<property name="actype"  value="Salary" />
+	</bean>
+	
+	<bean id="objEmp"  class="com.models.Employee">
+		<property  name="ename"  value="Naresh Kumar" />
+	</bean>
+</beans>

@@ -1,0 +1,77 @@
+Today's Agenda:- 
+----------------
+	1. Continuing JDBC
+	2. SQL Commands (Join Concept)
+	3. CURD Operations Application using Servlets
+-----------------
+PreparedStatement :- 
+
+This interface allows to write sql queries with arguments(parameters).
+i.e.  writing sql queries, whereever values are required we can pass it as parameters. 
+To represent parameter/argument use  "?" symbol whereever value is occured. 
+
+PreparedStatement  <object> =  connectionObject.prepareStatement("sql command");
+if sql commands are "Insert/Update/Delete"  then use "executeUpdate()" method to execute that query. 
+if sql commands are "Create/Alter/Drop"  then use "execute()" method to execute that query. 
+if sql command is "Select"  then use "executeQuery()"  method to execute that query. 
+
+Insert Query :- 
+
+PreparedStatement   ps = 
+       connObj.prepareStatement("Insert into Student(rollno, stdname, course, fees) values(?,?,?,?)");
+
+to pass value to an parameter, we have following setter Methods based on Data type of column/value type. 
+
+setInt(indexno, value)
+setFloat(indexno, value)
+setString(indexno, value)
+setLong((indexno, value)
+
+int rno = 1001;
+String sna = "ABC";
+String cur = "Java";
+float fee = 12000.00f;
+
+indexno's has to taken from sql query defined in "PreparedStatement", these numbers starts from 1, ..
+
+PreparedStatement   ps = 
+       connObj.prepareStatement("Insert into Student(rollno, stdname, course, fees) values(?,?,?,?)");
+	
+ps.setInt(1, rno);
+ps.setString(2, sna);
+ps.setString(3, cur);
+ps.setFloat(4, fee);
+ps.executeUpdate();
+-----------------------------
+Web Application for CURD Operations :- 
+------
+Db Table:-
+
+Employee
+
+Empno
+Empname
+Job
+Sal
+Email
+Password
+
+There are two types of users
+
+1.  Admin User :-  "Username" : admin and "Password": admin
+	Admin Logins :- 
+		1. Adding New Employees
+		2. View, Update and Delete
+
+2.  Emp User :- "Username" : email and "Password : "take from db"
+	Emp Logins
+		1. View That employee Details
+		2. Change Password
+
+-------------
+These all requirements implement it using servlets with jdbc. 
+
+Step1 :-  Create a table in Database. 
+Step2 :- Create Servlet App using eclipse
+Step3 :- Add required jar files(servlet-api, mysqlconnection)
+Step4 :- Copy mysqlconnector.jar file then paste it in Lib folder located in Web-Inf Folder.

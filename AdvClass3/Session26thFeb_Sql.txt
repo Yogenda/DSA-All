@@ -1,0 +1,194 @@
+Today's Agenda:-
+----------------
+1. Working with SQL Commands
+2. JDBC (Java Database Connectivity)
+------------------------------------
+What is an SQL? 
+
+Full form of sql :-  Structured Query Language. 
+
+It is an universal language for databases. 
+
+1. MySQL
+2. Oracle
+3. SQL Server
+4. Postgre SQL
+
+It is not a programming language, it is a non-procedural language where it consist collection of commands. 
+
+these are having different types
+
+1.  Data Definition Language Commands(DDL) :-  these are used to define database stucture like creation, modification and deletion.
+		CREATE, ALTER, DROP
+2.  Data Manipulation Language Commands(DML) :-  these are used to manipulate rows of the table(Add New Rows, modify existing row, deleting rows)
+		INSERT, UPDATE, DELETE
+3.  Data Retrival Language Command(DRL) :-it is used to retrive data from table(s). 
+		SELECT
+4.  Transaction Control Language Commands(TCL) :- these are used to control operations of the DML statements.
+		COMMIT, ROLLBACK
+5.  Data Control Language Commands :- these are used to control data b/w multiple users/databases.
+		GRANT, REVOKE
+ 
+
+Database :-  Collection of inter-related tables of particular entity. 
+
+if student is an entity:- 
+
+1.  Biodata
+2.  Marks
+3.  Fees
+4.  Attendance
+5.  Sports
+To work with SQL, here we are using MySQL Software. 
+
+As per the Db Softwares,  
+
+Database is a collection objects:  an object is data item of database where it stores particular type of data. 
+
+Tables, Views, Synoymns, Indexs, Procedures, Functions, Triggers. 
+Table stores actual data, remaining objects are used for different purpose by using tables.
+
+How to create  database?
+
+CREATE DATABASE <DATABASE NAME>;
+
+Use :-  this command is used to change from one db to another db. 
+
+use <dbname>;
+
+How to create a table? 
+
+CREATE TABLE <TABLENAME>(
+COL-1 <DATA TYPE>  [CONSTRAINT],
+COL-2 <DATA TYPE>  [CONSTRAINT],
+....................
+COL-N <DATA TYPE>  [CONSTRAINT]);
+
+
+Data Types :- 
+-------------
+int  = integer column
+float = decimal column
+char =  string with specific size (fixed size)
+varchar = string with specific size (variable length size)
+date  = for date column (yyyy-mm-dd)
+time = for time column 
+datetime  = both date and time. 
+image  =  for binary data
+
+Contraint :-  
+------------
+It is a rule applied on specific column of table. these are meant for maintain  data consistancy. 
+
+Null :-  it allows to have empty values in a column. 
+Not Null :-  it will not allows empty values. 
+Unique :-  it will not duplicate values. 
+Primary key :-  It is a combination of NOT NULL and UNIQUE. 
+Check :-  it allows to check specific values / range of values in column. 
+Default :-  it allows to set a default value for column while creating table. 
+Foriegn Key :-  it allows to create relationship b/w tables. 
+
+CREATE  TABLE BIODATA(
+rollno  int primary key, 
+sname varchar(20) Not Null, 
+gender char(1)  check(gender in ('M','F')), 
+birthdate date, 
+location  varchar(10)  default 'Hyderabad');
+
+INSERT :- It is used to create new rows for the table. 
+
+INSERT INTO <TABLE NAME>(COL1, COL2, ....) VALUES(VAL1, VAL2, ...);
+
+NOTE :- STRINGS AND DATE VALUES ENCLOSED WITHIN '....'
+
+UPDATE :-  IT IS USED TO MODIFY ROW VALUES/PERFORM SOME CALCULATIONS IN THE TABLE. 
+
+UPDATE  <TABLE NAME>  SET COLNAME=VALUE/EXPRESSION  [WHERE CLAUSE];
+
+DELETE :-  IT IS USED TO DELETE ROWS FROM TABLE. 
+
+DELETE FROM <TABLE NAME> [WHERE CLAUSE]
+
+DROP :-  IT IS USED TO DELETE ANY OBJECT FROM DATABASE. 
+
+DROP TABLE <TABLENAME>;
+
+ALTER :- THIS COMMAND IS USED TO PERFORM FOLLOWING THINGS
+
+1.  ADD NEW COLUMNS
+2.  MODIFY EXISTING COL DATA TYPE
+3.  DELETING EXISTING COL'S
+
+ALTER TABLE <TABLE NAME> ADD/DROP/MODIFY <EXPRESSION>
+====================================
+CREATE DATABASE Phase2Db;
+
+Use Phase2Db;
+
+CREATE  TABLE BIODATA(
+rollno  int primary key, 
+sname varchar(20) Not Null, 
+gender char(1)  check(gender in ('M','F')), 
+birthdate date, 
+location  varchar(10)  default 'Hyderabad');
+
+INSERT INTO BIODATA(ROLLNO, SNAME, GENDER, BIRTHDATE)
+VALUES(102, 'PRIYA BHAVANI', 'F', '2000-09-10');
+
+SELECT * FROM BIODATA;
+
+INSERT INTO BIODATA(ROLLNO, SNAME, GENDER, BIRTHDATE)
+VALUES(103, 'VENUGOPAL', 'M', '2000-11-10'),
+(104, 'PRAVASTHI', 'F', '2000-07-10'),
+(105, 'VENNELA', 'F', '2000-08-10');
+
+CREATE TABLE MARKS(ROLLNO INT PRIMARY KEY, 
+SNAME VARCHAR(20) not null, 
+EXAM VARCHAR(10) NOT NULL, 
+SUB1 INT, SUB2 INT, TOTAL INT, 
+AVGR FLOAT, RESULT CHAR(4));
+
+INSERT INTO MARKS(ROLLNO, SNAME, EXAM, SUB1, SUB2)
+VALUES(101, 'NARESH', 'QTRLY', 56,67),
+(102, 'MAHESH', 'QTRLY', 16,67),
+(103, 'RAMESH', 'QTRLY', 78,67),
+(104, 'LOKESH', 'QTRLY', 54,17),
+(105, 'PARAMESH', 'QTRLY', 99,67);
+
+SELECT * FROM MARKS;
+
+UPDATE MARKS SET TOTAL = SUB1+SUB2;
+
+UPDATE MARKS SET AVGR = TOTAL/2.0;
+
+UPDATE MARKS SET RESULT = 'PASS' WHERE SUB1>=35 AND SUB2>=35;
+
+UPDATE MARKS SET RESULT = 'FAIL' WHERE SUB1<35 OR SUB2<35;
+
+UPDATE MARKS SET SNAME='RAMESH GUPTA' WHERE ROLLNO=103;
+
+SELECT * FROM BIODATA;
+
+DELETE FROM BIODATA; -- IT delete'S ALL THE ROWS.
+DELETE FROM BIODATA WHERE ROLLNO=105;
+
+CREATE  TABLE TEST(RNO INT PRIMARY KEY, 
+SNAME VARCHAR(10), city varchar(10));
+-- adding new columns
+alter table test add pincode varchar(6);
+alter table test add phone int;
+
+-- modify existing col data type
+alter table test modify phone varchar(10);
+
+-- deleting existing colum
+alter table test drop column phone;
+
+drop table test;
+----------------------------------
+CREATE TABLE STUDENT(Rollno int primary key, 
+stdname varchar(20) not null, 
+course varchar(20),
+fees float);
+
+select * from student;

@@ -1,0 +1,41 @@
+
+    .textboxstyle
+    {
+        width:95%;
+        height: 30px;
+        background-color: antiquewhite;
+        color:blueviolet;
+        font-weight: bolder;
+        padding:5px;
+    }
+    table{
+        width:50%;
+        margin-left: auto;
+        margin-right: auto;
+        background-color:gray;
+    }
+
+    .buttonstyle
+    {
+        width:100px;
+        height: 30px;
+        color:white;
+        background-color: crimson;
+    }
+    .resetStyle
+    {
+        width:100px;
+        height: 30px;
+        color:white;
+        background-color:yellowgreen;
+    }
+    span{
+        color:white;
+        font-weight: bold;
+    }
+    p 
+    {
+        font-size: 25px;
+        color:white;
+        font-weight: bold;
+    }

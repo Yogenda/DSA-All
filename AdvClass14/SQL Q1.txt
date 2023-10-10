@@ -1,0 +1,24 @@
+Create database  HiberDb;
+
+use HiberDb;
+
+select * from stdinfo;
+
+Create table classes(classid int auto_increment primary key, 
+classname varchar(20));
+
+Insert into classes(classname) values('Class-I'),
+('Class-II'),
+('Class-III'),
+('Class-IV'),
+('Class-V');
+
+select * from classes;
+
+Create table studentmaster(
+rollno int primary key, 
+stdname varchar(20), 
+classid int, 
+foreign key(classid) references classes(classid));
+
+select * from studentmaster;

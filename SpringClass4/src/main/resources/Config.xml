@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+<!-- 
+	<bean id="course"  class="com.models.Course">
+		<property  name="cid"  value="11" />
+		<property  name="cname"  value="Java" />
+	</bean>
+ -->	 
+	<bean id="course1"  class="com.models.Course">
+		<property  name="cid"  value="12" />
+		<property  name="cname"  value="Python" />
+	</bean>
+	
+	<bean id="ObjStd"  class="com.models.Student" autowire="byType">
+		<property  name="rollno"  value="1221" />
+		<property  name="sname"   value="KIran Kumar" />
+	</bean>
+	
+	<bean id="objAdrs"  class="com.models.Address">
+		<constructor-arg name="dno"  value="11/123-A" />
+		<constructor-arg name="phone"  value="9900881234" />
+		<constructor-arg name="email"  value="shiva@gmail.com" />
+	</bean>
+	
+	<bean id="objCust"  class="com.models.Customer"  autowire="constructor">
+		<constructor-arg  name="cname"  value="Shiva Kumar" />
+	</bean>
+	
+	
+</beans>

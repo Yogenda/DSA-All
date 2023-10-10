@@ -1,0 +1,109 @@
+Today's Agenda
+--------------
+JSP :- Java Server Pages
+Hibernate
+------------------
+What is a JSP?
+
+It is also a web technology is used to develop server side web applications. 
+
+It has been developed on the top of Servlets because to overcome limitations of the servlets. 
+
+1.  jsp is a extension of servlets. 
+2.  Servlets allows write html and java by combining, whereas jsp will not do that, jsp separates
+	java code and html code within the same page. 
+3.  Jsp provides other facilities / features to make develop process very easy for the developer. 
+
+	A.  JSP gives a language called JSTL(Java(JSP) Standard Tag Library)
+		it can be used along with html, css, javascript. 
+	B.  It will provide lot of implicit objects  for the classes as follows
+			HttpServletResponse 	=  response
+			HttpServletRequest	=  request
+			PrintWriter		=  out
+			HttpSession 		=  session
+	C.  JSP technology used jsp pages i.e. web page having an extension .jsp
+			these pages allows to write html, css,javascript along with java code. 
+			whenever we need to write any java code use Scriptlet tag as follows
+				<%
+					java code
+				%>
+	D.  To import any package in jsp file use following statement 
+		<%@ page import="pacakge name" %>
+
+	E.  Jsp allow to call one page within another page. 
+		<jsp:include  page="pagename" />
+
+	F.  Jsp allows to move from one page to another page. 
+		<jsp:forward  page="pagename" />
+
+	G.  Tag Library(taglib) :- It is a directive declaration of jsp pages where it consist set of 			custom tags.  It has a library in the form of url. 
+
+			First download and add "jstl-1.2.jar" file and copy paste this file into 
+				lib folder of WEB-INF folder. 
+
+			Example for custom tags
+			if Condition  :  <:if ...>  
+					prefix is a word or letter what we define. 
+				<prefix:forEach ....  />
+				<prefix:out .... />
+
+			There are different types of custom tags
+				Core Tags
+				Function Tags
+				SQL Tags
+				XML Tags
+				Formatting Tags
+			Core Tags:- 
+				These tags are used to perform following things 
+					Variable Supports
+					Control statements
+					URL Managements
+			To use core tags :- 
+			<%@ taglib  uri="http://java.sun.com/jstl/core"  prefix="word" %>
+
+	Note:-  For any type of custom tags are existed in a specific url 
+				"http://java.sun.com/jstl"
+
+
+			<c:out> is used to print someting on the browser. 
+			<c:out value="${'text'/variable}" />
+			<c:set>  is used to create and assign value to a variable
+			<c:set var="variable name" scope="session" value="${value} />
+			<c:remove> is used to delete value from variable
+			<c:remove  var="variablename" />
+			<c:if> is used to check condition
+			<c:if test="${condition}>
+				set of statements
+			</c:if>
+			<c:forEach> is used for loop
+			<c:forEach  var="name"  begin="statval"  end="endval">
+				body of the loop
+			</c:forEach>
+			<c:redirect>  is used to move from one page to another page or any website. 
+			<c:redirect url="pagename/sitename"/>
+--------------------
+Note:-  Once dynamic web application created, add following two jar files form tomcat server. 
+			servlet-api.jar
+			jsp-api.jar
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

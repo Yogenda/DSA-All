@@ -1,0 +1,12 @@
+127.0.0.1 - - [05/Sep/2023:11:47:16 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [05/Sep/2023:11:47:20 +0530] "GET /AdvClass11/Login.jsp HTTP/1.1" 200 630
+0:0:0:0:0:0:0:1 - - [05/Sep/2023:11:47:20 +0530] "GET /favicon.ico HTTP/1.1" 404 762
+0:0:0:0:0:0:0:1 - - [05/Sep/2023:11:47:26 +0530] "POST /AdvClass11/Loginfun.jsp HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [05/Sep/2023:11:47:27 +0530] "GET /AdvClass11/ShowAllEmps.jsp HTTP/1.1" 200 1121
+0:0:0:0:0:0:0:1 - - [05/Sep/2023:11:47:32 +0530] "GET /AdvClass11/ShowAllEmps.jsp HTTP/1.1" 200 1121
+0:0:0:0:0:0:0:1 - - [05/Sep/2023:11:47:35 +0530] "GET /AdvClass11/AddNewEmp.jsp HTTP/1.1" 500 3290
+0:0:0:0:0:0:0:1 - - [05/Sep/2023:11:49:37 +0530] "GET /AdvClass11/ShowAllEmps.jsp HTTP/1.1" 200 1121
+0:0:0:0:0:0:0:1 - - [05/Sep/2023:11:49:39 +0530] "GET /AdvClass11/AddNewEmp.jsp HTTP/1.1" 200 1159
+0:0:0:0:0:0:0:1 - - [05/Sep/2023:11:49:53 +0530] "POST /AdvClass11/AddEmpFun.jsp HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [05/Sep/2023:11:49:53 +0530] "GET /AdvClass11/AddNewEmp.jsp HTTP/1.1" 200 1159
+0:0:0:0:0:0:0:1 - - [05/Sep/2023:11:49:55 +0530] "GET /AdvClass11/ShowAllEmps.jsp HTTP/1.1" 200 1273

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete 13 resources" deleteContents="true" description="Delete 13 resources" element1="/Class1_1" element10="/Class6_2_JSPWebApps" element11="/Class6_3_JSPUsingJDBCApp" element12="/Class7_1HibernateFirstApp" element13="/testapp" element2="/Class1_2" element3="/Class2_1" element4="/Class3_1_JDBCTestApp" element5="/Class3_2_ServletWithJDBC" element6="/Class4_1_StudApp" element7="/Class4_2_EmpApp" element8="/Class5_WebProgram" element9="/Class6_1_StudentApp" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="13" stamp="1684880577204"/>
+</session>

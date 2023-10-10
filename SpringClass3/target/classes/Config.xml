@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="objAdrs"  class="Beans.Address">
+		<property  name="dno"  value="121-A" />
+		<property name="city"  value="Hyderabad" />
+		<property name="phone"  value="9900123456" />
+		<property name="email"  value="siva@gmail.com" />
+	</bean>
+	
+	<bean id="objEmp"  class="Beans.Employee">
+		<property name="empno"  value="1001" />
+		<property name="ename"  value="Siva Kumar" />
+		<property name="adrs"   ref="objAdrs" />
+	</bean>
+	
+	
+	<bean id="ObjStd"  class="Beans.Student">
+		<property  name="rollno"  value="1221"/>
+		<property  name="sname" value="Suresh Kumar" />
+		<property name="qualifications">
+			<list>
+				<value>M.Tech</value>
+				<value>B.Tech</value>
+			</list>
+		</property>
+		
+		<property name="courses">
+			<set>
+				<value>Java</value>
+				<value>MySQL</value>
+				<value>Spring FW</value>
+			</set>
+		</property>
+		
+		<property name="course_faculty">
+			<map>
+				<entry key="Java"  value="Satyam" />
+				<entry key="MySQL"  value="Priya Bhavani" />
+				<entry key="Spring FW"  value="Venugopal" />
+			</map>
+		</property>
+	</bean>
+</beans>

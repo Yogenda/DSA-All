@@ -1,0 +1,206 @@
+Today's Agenda:- 
+----------------
+1. SQL Joins
+2. CSS
+3. Introduction to JSP
+----------------------
+Joins  :- It is  the process of  retriving data from multiple tables when those tables are in relation ship. 
+
+How to Create tables in relationship:- 
+--------------------------------------
+The process of creating tables with foriegn key b/w parent and child tables. 
+
+Rules to create tables in relationship:
+
+1.  Parent and Child tables must be a common column. 
+2.  In parent table common column must be have primary key. 
+3.  In Child table common column should have foriegn key. 
+
+4.  First add rows to the parent table then add rows to the child table.
+
+5.  If we need to delete a row in parent table first we have to delete all the rows from child table relavent to that particular row, then delete row from parent table. It also applicable to the drop command. 
+
+Create table <tablename>(
+col1, 
+col2, 
+foreign key(commoncol)  references parenttable(commoncol));
+----
+
+Joins :- 
+
+the process of retriving data from multiple tables when those tables are in relationship. 
+
+	select table1.col1, table1.col2, .... table2.col1, table2.col2, ....
+	from table1  <join type>  table2  on  <join condition>
+
+	Note : join condition is must, it should be b/w common col of joining tables. 
+	
+there are multiple types of joins 
+
+1.  Inner Join :-  
+		this type of join retrives rows from joining tables when both tables are common values
+		in column cols. 
+
+		Table alias :-  we can provide an alternative name for table
+				SELECT E.ENAME, E.SAL FROM EMP AS E;
+
+2.  Outer Join :- 
+	this type of join retrives rows from joining tables where matching and non-matching rows.
+		it has been divided into two types
+			Left Outer Join
+			Right Outer Join
+
+Left Outer Join	:- here comparision starts from left side table to right side table of join statment.
+			here all values from leftside table compares to the right side table, 
+			in this value present in left side table may or may have to value in right 				side table, even the value will be fetched. 
+Right Outer Join :-   Comparision from Right side to Left side.
+
+3.  Self Join :-  this type of join implements only on single table when that table having colum to 			colum  referencing. 
+
+4.  Cross Join  :-  the join process having without join condition.
+---------------
+Examples
+use phase2db;
+-- PARENT TABLE
+CREATE TABLE STDBIO(
+ROLLNO INT PRIMARY KEY, 
+STDNAME VARCHAR(20), 
+LOCATION VARCHAR(20) DEFAULT 'BANGALORE');
+
+-- CHILD TABLE
+CREATE TABLE STDMARKS(
+SNO INT PRIMARY KEY, 
+EXAM  VARCHAR(10), 
+TOTAL INT, 
+ROLLNO INT, 
+FOREIGN KEY(ROLLNO) REFERENCES STDBIO(ROLLNO));
+
+insert into stdbio(rollno, stdname)
+values(101, 'Pavan'),(102, 'kiran'), (103, 'lokesh');
+
+select * from stdbio;
+
+delete from stdbio where rollno=102;
+insert into stdmarks(sno, exam, total, rollno)
+values(5, 'Halfly', 115, 102);
+
+select * from stdmarks;
+
+delete from stdmarks where rollno=102;
+----------------------------------------------
+Create table Dept(deptno int primary key, 
+dname varchar(20), location varchar(20));
+
+Insert into Dept values
+(10, 'Research', 'Hyderabad'),(20, 'Accounts','Delhi'), 
+(30, 'Sales', 'Bangalore'),(40, 'Education', 'Hyderabad'); 
+
+select * from Dept;
+
+CREATE TABLE EMP(EMPNO INT primary KEY, 
+ENAME VARCHAR(20), 
+JOB VARCHAR(10), 
+SAL INT, JOINDATE DATE, 
+COMM  INT, 
+DEPTNO INT, 
+FOREIGN KEY(DEPTNO) REFERENCES DEPT(DEPTNO));
+
+ALTER TABLE EMP ADD MANAGER INT;
+SELECT * FROM EMP;
+select * from dept;
+
+SELECT EMP.ENAME, EMP.JOB, EMP.SAL, 
+DEPT.DEPTNO, DEPT.DNAME, DEPT.LOCATION
+FROM EMP INNER JOIN DEPT
+ON EMP.DEPTNO = DEPT.DEPTNO;
+
+SELECT EMP.*, DEPT.* FROM EMP INNER JOIN DEPT
+ON EMP.DEPTNO = DEPT.DEPTNO;
+-- table alias
+
+SELECT E.ENAME, E.JOB, E.SAL, 
+D.DEPTNO, D.DNAME, D.LOCATION
+FROM EMP AS E INNER JOIN DEPT AS D
+ON E.DEPTNO = D.DEPTNO;
+
+SELECT * FROM STDBIO;
+SELECT * FROM STDMARKS;
+
+SELECT B.ROLLNO, B.STDNAME, B.LOCATION, 
+M.EXAM, M.TOTAL
+FROM STDBIO AS B INNER JOIN STDMARKS AS M
+ON B.ROLLNO = M.ROLLNO; 
+
+SELECT E.ENAME, E.JOB, E.SAL, 
+D.DEPTNO, D.DNAME, D.LOCATION
+FROM EMP AS E RIGHT OUTER JOIN DEPT AS D
+ON E.DEPTNO = D.DEPTNO;
+
+SELECT E.ENAME, E.JOB, E.SAL, 
+D.DEPTNO, D.DNAME, D.LOCATION
+FROM EMP AS E LEFT OUTER JOIN DEPT AS D
+ON E.DEPTNO = D.DEPTNO;
+
+select * from emp;
+-- SELF JOIN
+SELECT E.ENAME AS MANAGER, M.ENAME AS EMPLOYEE 
+FROM  EMP AS E
+RIGHT OUTER JOIN EMP AS M
+ON E.EMPNO = M.MANAGER;
+
+SELECT E.ENAME, E.JOB, E.SAL, 
+D.DEPTNO, D.DNAME, D.LOCATION
+FROM EMP AS E cross JOIN DEPT AS D;
+
+--------------------------------------------------------------
+CSS in HTML :- 
+
+CSS :-  Cascading Style Sheets
+
+It is meant for applying some designing parts of the web page, where it looks beautifully. 
+
+CSS can be applied into three ways. 
+
+1.  Inline CSS
+2.  Page Level
+3.  Site Level
+
+Inline CSS :- 
+-------------
+These css will be applied for every tag style property.
+
+<tag style="propertyname:value;propertyname:value;....." />
+
+PageLevel :-  we can define css classes for every tag and user defined css classes. 
+it has to be done in <style> tag which is in <head> tag. 
+
+for creating user defined css classes, there are two ways
+
+.(dot) based css classes
+
+	.cssclassname
+	{
+		propname:value
+	}
+
+these classes are access for every tag with "class" property 
+		<tag  class="cssclassname" .... />
+#(hash) based css classes
+
+	#cssclassname
+	{
+		propname:value
+	}
+
+these classes are access for every tag with "id" property 
+		<tag  id="cssclassname" .... />
+
+Site Level :- this type of css will be accessed in multiple web pages, for this we have follow below given steps
+
+		1. Create a file with extension .css
+		2. define all css classes into that file. 
+		3. Link that css file into every web page whereever it is needed
+			<head>
+				<link  href="css filename"  rel="stylesheet" />
+			</head>
+---------------------------------------------

@@ -1,0 +1,53 @@
+	
+		
+		
+		
+	Create table students(id int auto_increment primary key, 
+stdname varchar(20));
+
+Create table teachers(tid int auto_increment primary key, 
+teachername  varchar(20));
+
+Create  table course(cid int auto_increment primary key, 
+coursename varchar(20), 
+tid int, foreign key(tid) references teachers(tid));
+
+Create table std_course(sno int auto_increment primary key, 
+sid int, 
+cid int, 
+foreign key(sid) references students(id),
+foreign key(cid) references course(cid));
+ 
+select * from students;
+select * from teachers;
+select * from course;
+select * from std_course;
+
+-- write a query to display
+-- studentid, name, course name
+
+SELECT
+s.id,
+  s.stdname,
+  c.coursename
+FROM students as s
+INNER JOIN std_course AS sc
+  ON s.id = sc.sid
+INNER JOIN course as c
+  ON c.cid = sc.cid;
+
+-- write a query to display
+-- studentid, name, teacher name, course name
+
+SELECT
+	s.id,
+  s.stdname,
+  c.coursename, 
+  t.teachername
+FROM students as s
+INNER JOIN std_course AS sc
+  ON s.id = sc.sid
+INNER JOIN course as c
+  ON c.cid = sc.cid
+INNER JOIN teachers as t
+on c.tid = t.tid;
