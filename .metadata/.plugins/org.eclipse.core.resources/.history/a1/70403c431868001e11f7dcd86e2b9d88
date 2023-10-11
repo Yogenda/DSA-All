@@ -1,0 +1,13 @@
+package first;
+
+public class FirstClass {
+	public static int main(String args[]) {
+		System.out.println("Hello world!"); // print line by line.
+		
+		int a = 1;
+		System.out.print(a);
+		int b = 4;
+		System.out.println(b);
+		System.out.println(b);
+	}
+}
