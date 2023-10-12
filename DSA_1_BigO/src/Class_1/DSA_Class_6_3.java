@@ -1,7 +1,7 @@
 package Class_1;
 
 import java.util.*;
-
+//1, 1 | 1,2|1,3|1, 4|1, 5|2, 1.......etc
 public class DSA_Class_6_3 {
 	public static void logAllPairsOfArray(int[] array) {
         for (int i = 0; i < array.length; i++) {

@@ -17,7 +17,7 @@ public class DSA_Class_4 {
     }
 
 	public static void main(String[] args) {
-		String[] nemo = new String[1000000];
+		String[] nemo = new String[100000];
 		// fill(): Assigns the specified Object reference to each element of the specified array of Objects.
         Arrays.fill(nemo, "nemo");
         findNemo(nemo);

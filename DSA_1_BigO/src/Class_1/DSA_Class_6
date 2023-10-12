@@ -133,8 +133,48 @@ so the answer if O(x^2)
 As the nuber of loops increases the number of powers increses O(x^2), O(x^3)...
 
 you can reffer the cheat sheet if you have any doubt regarding the Big O: https://drive.google.com/file/d/1JE1jKMWdOKXkjTIx2mV8CxhFwyQpQNsX/view?usp=sharing
+__________________________
 
+We have lot may Big O notations left but we will conver then while learning the DSA as the work with the specific type of algorityhms.
 
+https://www.bigocheatsheet.com/
+Data Structure + Alogorithm = program
+now question comes what is DS it us nothing but just the way to store the data. and the algorithms are the functions which uses the DS to wrote our program.
 
+Every good programmer should know the DSA inorder to write the good program.
+__________________________________
+the new type of Big O is O(n!): factorial time.
+this is the most costliest and most expesive or the steapest among all the notations of big O.
 
+in this we are just simpley creating the nested loop for every input. and no one is using this.
+
+ _______________
+
+when it comes to scalable we have to take care of 2 things
+	1. speed: 
+	2. Memory: 
+	
+If you wanted to know the best code then you have to know the 3 pillers of your code.
+1. readable
+2. speed (Time complexity (Big O))
+3. Memory: Space Complexity it uses same notation but different topics.
+
+if we want more speed then we have less memory efficent
+if we want more memory then we have less speed.
+
+its time to learn the space complexity.
+when the program execute we have 2 things to keep in mind that is:
+	1. heap: it is the place where we store our variables.
+	2. stack: take care of function execution
+	
+some time we have to configur our app with less memory instead of using less time.
+with this we find how much memory is been used.
+
+while running the fuction we know he it is running but we should know how space/memory it is taking.
+
+What causes space complexity:
+1. variables
+2. DS
+3. function call
+4. Allocations
 
