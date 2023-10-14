@@ -1,0 +1,63 @@
+What is Data Structure?
+DS is the collection of values.
+
+What are Algorithm?
+These are the steps or processes we put into place to manipulate the collection of values and it allows us to write programs.
+
+Data Structure + Algorithm = Program
+
+Who are the good programmers? 
+the person who knows data struture and algorithm are the good programmers.
+
+-----------------------
+
+What is Data Structure?
+DS is the collection of values.
+values can have relationship among them and they can have function applied to them.
+each one is differnet in what it can do and what it is best used for.
+each DS is good and specialised in its on thing. 
+
+eg: school bag for books, folder for your documents, box for your toys. etc
+each object is used for its own thing.
+eg: I am not going to add my toys in folder or toys in my school bag.
+
+we can put things in DS and we can retrive things when required in ordered way.
+
+We have lots of Data Structure. but we don't have to use those in real life many of them are very specific.
+we must have only 6 or 7 DS that are important. 
+Link of DS: https://en.wikipedia.org/wiki/List_of_data_structures
+
+Eg: bitcoin also uses its on DS that is Block Chain.
+
+What we can store in DS: we can store Int, Strings, Boolean...etc.
+arrays and objects are also a type of DS which allows us to store value in it.
+
+important things to know about Data Structure?
+1. how to build
+2. how to use
+--------------------
+
+To understand how DS works we have to understand how computer works 
+keep track of values like variables, strings, array.. etc. and these values are stored in RAM
+and after that we have storage where we store file like video files music files etc.. it can be any thing SSD, pendrive, CD.. etc.
+
+In storage your memory is perm. and in ram its temp. 
+question comes in mind why we can not use storage if its perm. because it is slow.
+
+what cpu do? it do all the calculation you can imagin it as a little worker.
+
+in our ram the data are stored in form of address.
+cpu is conneced to a memory controller, it does all the reading/writing of data from the ram.
+
+cpu also collect the cache of the last task 
+
+you can learn more about memory from the link: https://statmath.wu.ac.at/courses/data-analysis/itdtHTML/node55.html
+memory register: https://www.youtube.com/watch?v=fpnE6UAfbtU
+
+Types of operations we can perform:
+1. Insertion
+2. Deletion
+3. Searching
+4. Traversal
+
+ 
