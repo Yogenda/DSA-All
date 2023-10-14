@@ -1,6 +1,0 @@
-what if i will ask you what is the Big O of our function nemo.
-
-as our number of elements increases same our number of operations increases.
-so this is Linear.
-
-Here we learned our first Big O notation which is O(n) --> Linear time.

@@ -1,0 +1,120 @@
+What are the skills the companies looking for?
+1. Analytic Skills: how you can analyze things and come to a solution. 
+		Just want to know your thaught process
+2. Coding Skills: How are your codding standerds
+3. Technical Skills: do you know programming fundamentals
+4. Communication Skills: Does your personality matches company personality.
+
+No one going to ask you to write the binary serch tree or sorting algo from scratch you will learn in the company itself while working.
+
+every body know we are searching for the answers over internet but inorder to search the answer you must know which DS or Algorithem you must have to use so that you can solve the problem.
+they need the smart workers
+
+-----------------------------------
+
+if we wnat to to solve the company problem then we mush have some knowledge of 
+Data Structure:
+	1. arrays
+	2. tree
+	3. stack
+	4. tries
+	5. queues
+	6. graphs
+	7. link list
+	8. hash table
+
+Algorithms: 
+	1. Sorting
+	2. Dynamic Programming
+	3. BFS+DFS(searching)
+	4. Recursion
+
+there are lot many data structures and algorithm but above are the most important.
+90% of time we will use these itself. 
+cheatsheet: https://drive.google.com/file/d/122VeFYFT_PUNs92RONydco8ACoJtXU6w/view?usp=sharing
+
+while you are in coding interview you have to take care of the steps mentioned in cheatsheet above "Step by step through a problem" section.
+Reffer the video of google interview the best way to answer questions:
+https://www.youtube.com/watch?v=XKu_SEDAykw
+
+Problem question:
+//given 2 arrays, create a function that let's a user know (true/false) whether these two arrays contain any common items
+
+
+_________________________________
+
+Solution: 
+//for example:
+//const array1 = ['a', 'b', 'c', 'x'];
+//const array2 = ['z', 'y', 'i'];
+//should return false.
+//-----------
+//const array1 = ['a', 'b', 'c', 'x'];
+//const array2 = ['z', 'y', 'x'];
+//should return true.
+
+// 2 parameters - arrays - no size limit
+// return true or false
+
+// brute force - nested loops - O(n^2)
+
+Class_1_Program2
+// const arr1 = ['a', 'b', 'c', 'x']; 
+// const arr2 = ['z', 'y', 'i'];
+// function containsCommonItem(arr1, arr2) {
+//   for (let i = 0; i < arr1.length; i++) {
+//     for (let j = 0; j < arr2.length; j++) {
+//       if (arr1[i] === arr2[j]) {
+//         return true;
+//       }
+//     }
+//   }
+//   return false;
+// }
+// containsCommonItem(arr1, arr2);
+
+// O(a*b) - Time Complexity //we can not write it as O(n^2) because array size can change.
+// O(1) - Space Complexity
+// Time Complexity - Big O(n^2)
+// Space Complexity - Big O(1)
+// Time Complexity - Big O(n^2)
+
+we have may other approaches to solve the problem like hash table we will learn later.
+if any ways i am able to make our first array in object then it will be bit more easire.
+
+// array1=> obj {
+//   a: true,
+//   b: true,
+//   c: true,
+//   x: true
+// }
+// array2[index] === obj.properties
+
+
+our second array elements check with the first array object. Class_1_Program.java
+// const arr1 = ['a', 'b', 'c', 'x'];
+// const arr2 = ['z', 'y', 'i'];
+// function containsCommonItem2(arr1, arr2) {
+//   // loop through first array and create object where properties === items in the array
+//   let map = {};
+//   for (let i = 0; i < arr1.length; i++) {
+//     if (!map[arr1[i]]) {
+//       const item = arr1[i];
+//       map[item] = true;
+//     }
+//   }
+//   // loop through second array and check if item in second array exists on created object.
+//   for (let j = 0; j < arr2.length; j++) {
+//     if (map[arr2[j]]) {
+//       return true;
+//     }  
+// }
+//   return false;
+// }
+
+// containsCommonItem2(arr1, arr2);
+// O(a + b) Time Complexity
+// O(a) Space Complexity
+
+
+

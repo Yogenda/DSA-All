@@ -178,3 +178,36 @@ What causes space complexity:
 3. function call
 4. Allocations
 
+H/w- 
+i want to display the instagram post if i click the bot it will display the most resent post
+and also the first post i have uploaded on it.
+the images are stored in the form of array.
+
+------------------------------
+solution:- DSA_Class_7
+//find 1st and find nth...
+const array = ['hi','my','teddy'];
+array[0]; //O(1)
+array[array.length-1]; //O(1)
+
+------------------------------
+Q2. now boss came and told me that i want to compare the dates of the post. for that i want
+ you to look on every tweet and compare the dates.
+ 
+Hint: create the date object in the arrya.
+
+
+-------------------------------
+Solutions:
+const array = [{post:'hi',date: 2021},
+               {post:'my',date: 2000},
+               {post:'teddy',date: 2003}]; 
+
+//O(n^2)
+this is going to be very inefficent so i hvae to change the format to store the array.
+
+
+
+
+
+
